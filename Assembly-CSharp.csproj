@@ -52,7 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\core\Board.cs" />
-     <Compile Include="Assets\core\Checker.cs" />
+     <Compile Include="Assets\core\Piece.cs" />
      <Compile Include="Assets\core\Position.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/opt/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
