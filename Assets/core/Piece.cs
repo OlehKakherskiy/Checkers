@@ -37,6 +37,10 @@ public class Piece : MonoBehaviour {
 		}
 	}
 
+	public void OnClick() {
+		Debug.Log ("was click on "+transform.parent.name);
+	}
+
 	public void Start() {
 		GameBoard = Board.GetComponent<Board> ();
 	}

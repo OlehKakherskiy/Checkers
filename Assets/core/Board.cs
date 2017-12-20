@@ -23,6 +23,10 @@ public class Board : MonoBehaviour {
 		
 	}
 
+	public void handleCellClick() {
+		Debug.Log ("WasPressed");
+	}
+
 	private void GenerateBoard() {
 		//gen white pieces
 		for (int y = 0; y < 3; y++) {

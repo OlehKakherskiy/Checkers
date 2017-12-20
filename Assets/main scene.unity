@@ -119,13 +119,14 @@ GameObject:
   - component: {fileID: 22834787}
   - component: {fileID: 22834786}
   - component: {fileID: 22834788}
+  - component: {fileID: 22834789}
   m_Layer: 5
   m_Name: Cell 29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &22834785
 RectTransform:
   m_ObjectHideFlags: 0
@@ -133,16 +134,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 22834784}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.584, y: 4.062}
-  m_SizeDelta: {x: 51.313, y: 52.994}
+  m_AnchorMin: {x: 0.387116, y: 0.8375084}
+  m_AnchorMax: {x: 0.5, y: 0.9480001}
+  m_AnchoredPosition: {x: 0.052001953, y: 1.0500183}
+  m_SizeDelta: {x: -0.1000061, y: -0.10998535}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &22834786
 MonoBehaviour:
@@ -156,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -188,9 +189,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &22834789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 22834784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &124474365
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,13 +233,14 @@ GameObject:
   - component: {fileID: 124474368}
   - component: {fileID: 124474367}
   - component: {fileID: 124474369}
+  - component: {fileID: 124474370}
   m_Layer: 5
   m_Name: Cell 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &124474366
 RectTransform:
   m_ObjectHideFlags: 0
@@ -216,16 +248,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 124474365}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.052, y: -2.892}
-  m_SizeDelta: {x: 53.406, y: 52.994}
+  m_AnchorMin: {x: 0.8373043, y: 0.1601807}
+  m_AnchorMax: {x: 0.94723195, y: 0.27481928}
+  m_AnchoredPosition: {x: -0.2899933, y: 0.6199951}
+  m_SizeDelta: {x: 1.7999878, y: -0.79000854}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &124474367
 MonoBehaviour:
@@ -239,7 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -271,9 +303,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &124474370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 124474365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &222860566
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,13 +347,14 @@ GameObject:
   - component: {fileID: 222860569}
   - component: {fileID: 222860568}
   - component: {fileID: 222860570}
+  - component: {fileID: 222860571}
   m_Layer: 5
   m_Name: Cell 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &222860567
 RectTransform:
   m_ObjectHideFlags: 0
@@ -299,16 +362,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 222860566}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.717, y: -2.892}
-  m_SizeDelta: {x: 53.233, y: 52.994}
+  m_AnchorMin: {x: 0.61365217, y: 0.1601807}
+  m_AnchorMax: {x: 0.71730435, y: 0.27481928}
+  m_AnchoredPosition: {x: 2, y: 0.6199951}
+  m_SizeDelta: {x: 4.600006, y: -0.79000854}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &222860568
 MonoBehaviour:
@@ -322,7 +385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -354,9 +417,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &222860571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 222860566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &287133072
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,13 +461,14 @@ GameObject:
   - component: {fileID: 287133075}
   - component: {fileID: 287133074}
   - component: {fileID: 287133076}
+  - component: {fileID: 287133077}
   m_Layer: 5
   m_Name: Cell 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &287133073
 RectTransform:
   m_ObjectHideFlags: 0
@@ -382,16 +476,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 287133072}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.889, y: -4.051}
-  m_SizeDelta: {x: 53.84, y: 54.274}
+  m_AnchorMin: {x: 0.71730435, y: 0.056327738}
+  m_AnchorMax: {x: 0.8373043, y: 0.1601807}
+  m_AnchoredPosition: {x: 0.58999634, y: -0.7999878}
+  m_SizeDelta: {x: -2.7999878, y: 4.700012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &287133074
 MonoBehaviour:
@@ -405,7 +499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -437,9 +531,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &287133077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 287133072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &291271042
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,13 +575,14 @@ GameObject:
   - component: {fileID: 291271045}
   - component: {fileID: 291271044}
   - component: {fileID: 291271046}
+  - component: {fileID: 291271047}
   m_Layer: 5
   m_Name: Cell 14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &291271043
 RectTransform:
   m_ObjectHideFlags: 0
@@ -465,16 +590,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 291271042}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.717, y: -0.563}
-  m_SizeDelta: {x: 53.233, y: 52.114}
+  m_AnchorMin: {x: 0.61365217, y: 0.38532773}
+  m_AnchorMax: {x: 0.7278841, y: 0.5}
+  m_AnchoredPosition: {x: -0.875, y: 0.62999725}
+  m_SizeDelta: {x: -1.1000061, y: -1.9299927}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &291271044
 MonoBehaviour:
@@ -488,7 +613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -520,9 +645,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &291271047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 291271042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &401569830
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,13 +689,14 @@ GameObject:
   - component: {fileID: 401569833}
   - component: {fileID: 401569832}
   - component: {fileID: 401569834}
+  - component: {fileID: 401569835}
   m_Layer: 5
   m_Name: Cell 23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &401569831
 RectTransform:
   m_ObjectHideFlags: 0
@@ -548,16 +704,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 401569830}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.044, y: 1.737}
-  m_SizeDelta: {x: 52.593, y: 54.274}
+  m_AnchorMin: {x: 0.8373043, y: 0.6103277}
+  m_AnchorMax: {x: 0.94723195, y: 0.7228194}
+  m_AnchoredPosition: {x: 0.5200043, y: 1.300003}
+  m_SizeDelta: {x: 1, y: -1.7000122}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &401569832
 MonoBehaviour:
@@ -571,7 +727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -603,9 +759,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &401569835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 401569830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &467499280
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,13 +803,14 @@ GameObject:
   - component: {fileID: 467499283}
   - component: {fileID: 467499282}
   - component: {fileID: 467499284}
+  - component: {fileID: 467499285}
   m_Layer: 5
   m_Name: Cell 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &467499281
 RectTransform:
   m_ObjectHideFlags: 0
@@ -631,16 +818,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 467499280}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.729, y: -1.727}
-  m_SizeDelta: {x: 52.126, y: 52.994}
+  m_AnchorMin: {x: 0.27188405, y: 0.27481928}
+  m_AnchorMax: {x: 0.387116, y: 0.38532773}
+  m_AnchoredPosition: {x: 0.78299713, y: 1.0800018}
+  m_SizeDelta: {x: -0.5, y: 0.58999634}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &467499282
 MonoBehaviour:
@@ -654,7 +841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -686,9 +873,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &467499285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 467499280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &527294673
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,13 +917,14 @@ GameObject:
   - component: {fileID: 527294676}
   - component: {fileID: 527294675}
   - component: {fileID: 527294677}
+  - component: {fileID: 527294678}
   m_Layer: 5
   m_Name: Cell 21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &527294674
 RectTransform:
   m_ObjectHideFlags: 0
@@ -714,16 +932,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 527294673}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.576, y: 1.727}
-  m_SizeDelta: {x: 52.593, y: 54.274}
+  m_AnchorMin: {x: 0.387116, y: 0.6103277}
+  m_AnchorMax: {x: 0.5, y: 0.7228194}
+  m_AnchoredPosition: {x: 0.44400024, y: 1.300003}
+  m_SizeDelta: {x: -0.1000061, y: -1.7000122}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &527294675
 MonoBehaviour:
@@ -737,7 +955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -769,9 +987,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &527294678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 527294673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &537444617
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,13 +1031,14 @@ GameObject:
   - component: {fileID: 537444620}
   - component: {fileID: 537444619}
   - component: {fileID: 537444621}
+  - component: {fileID: 537444622}
   m_Layer: 5
   m_Name: Cell 17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &537444618
 RectTransform:
   m_ObjectHideFlags: 0
@@ -797,16 +1046,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 537444617}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.743, y: 0.574}
-  m_SizeDelta: {x: 53.406, y: 52.994}
+  m_AnchorMin: {x: 0.27188405, y: 0.5}
+  m_AnchorMax: {x: 0.387116, y: 0.6103277}
+  m_AnchoredPosition: {x: 0.9560013, y: 0.8460007}
+  m_SizeDelta: {x: -0.2000122, y: 3.0200195}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &537444619
 MonoBehaviour:
@@ -820,7 +1069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -852,9 +1101,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &537444622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 537444617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &555546906
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,13 +1145,14 @@ GameObject:
   - component: {fileID: 555546909}
   - component: {fileID: 555546908}
   - component: {fileID: 555546910}
+  - component: {fileID: 555546911}
   m_Layer: 5
   m_Name: Cell 16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &555546907
 RectTransform:
   m_ObjectHideFlags: 0
@@ -880,16 +1160,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 555546906}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.073, y: 0.574}
-  m_SizeDelta: {x: 53.233, y: 52.994}
+  m_AnchorMin: {x: 0.050768096, y: 0.5}
+  m_AnchorMax: {x: 0.16081169, y: 0.6103277}
+  m_AnchoredPosition: {x: -0.020019531, y: 1.4290009}
+  m_SizeDelta: {x: 0.1000061, y: 2.2600098}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &555546908
 MonoBehaviour:
@@ -903,7 +1183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -935,9 +1215,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &555546911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 555546906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &575621642
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,13 +1259,14 @@ GameObject:
   - component: {fileID: 575621645}
   - component: {fileID: 575621644}
   - component: {fileID: 575621646}
+  - component: {fileID: 575621647}
   m_Layer: 5
   m_Name: Cell 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &575621643
 RectTransform:
   m_ObjectHideFlags: 0
@@ -963,16 +1274,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 575621642}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.066, y: -4.058}
-  m_SizeDelta: {x: 53.873, y: 53.634}
+  m_AnchorMin: {x: 0.050768096, y: 0.056327738}
+  m_AnchorMax: {x: 0.16081169, y: 0.1601807}
+  m_AnchoredPosition: {x: -0.1499939, y: -1.1499939}
+  m_SizeDelta: {x: 0.3999939, y: 4.049988}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &575621644
 MonoBehaviour:
@@ -986,7 +1297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1018,9 +1329,81 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &575621647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 575621642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!1001 &648255065
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1497752095}
+    m_Modifications:
+    - target: {fileID: 4284386432937370, guid: cf8f6920e66284f3f955e16a5c5fb9ae, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1640.0685
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284386432937370, guid: cf8f6920e66284f3f955e16a5c5fb9ae, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 448.03265
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284386432937370, guid: cf8f6920e66284f3f955e16a5c5fb9ae, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284386432937370, guid: cf8f6920e66284f3f955e16a5c5fb9ae, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284386432937370, guid: cf8f6920e66284f3f955e16a5c5fb9ae, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284386432937370, guid: cf8f6920e66284f3f955e16a5c5fb9ae, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284386432937370, guid: cf8f6920e66284f3f955e16a5c5fb9ae, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4284386432937370, guid: cf8f6920e66284f3f955e16a5c5fb9ae, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: cf8f6920e66284f3f955e16a5c5fb9ae, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &762721043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,13 +1415,14 @@ GameObject:
   - component: {fileID: 762721046}
   - component: {fileID: 762721045}
   - component: {fileID: 762721047}
+  - component: {fileID: 762721048}
   m_Layer: 5
   m_Name: Cell 25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &762721044
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1046,16 +1430,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 762721043}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.729, y: 2.886}
-  m_SizeDelta: {x: 52.126, y: 52.994}
+  m_AnchorMin: {x: 0.27188405, y: 0.7228194}
+  m_AnchorMax: {x: 0.387116, y: 0.8375084}
+  m_AnchoredPosition: {x: 0.57499695, y: 1.3899841}
+  m_SizeDelta: {x: -1.3999939, y: -0.39001465}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &762721045
 MonoBehaviour:
@@ -1069,7 +1453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1101,9 +1485,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &762721048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 762721043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &777658262
 GameObject:
   m_ObjectHideFlags: 0
@@ -1115,13 +1529,14 @@ GameObject:
   - component: {fileID: 777658265}
   - component: {fileID: 777658264}
   - component: {fileID: 777658266}
+  - component: {fileID: 777658267}
   m_Layer: 5
   m_Name: Cell 19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &777658263
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1129,16 +1544,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 777658262}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.896, y: 0.574}
-  m_SizeDelta: {x: 53.2, y: 52.994}
+  m_AnchorMin: {x: 0.7278841, y: 0.5}
+  m_AnchorMax: {x: 0.8373043, y: 0.6103277}
+  m_AnchoredPosition: {x: -0.3819275, y: 1.5309982}
+  m_SizeDelta: {x: 1.6000061, y: 2.4699707}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &777658264
 MonoBehaviour:
@@ -1152,7 +1567,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1184,9 +1599,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &777658267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 777658262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &833096189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,13 +1643,14 @@ GameObject:
   - component: {fileID: 833096192}
   - component: {fileID: 833096191}
   - component: {fileID: 833096193}
+  - component: {fileID: 833096194}
   m_Layer: 5
   m_Name: Cell 12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &833096190
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1212,16 +1658,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 833096189}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.897, y: -0.57}
-  m_SizeDelta: {x: 52.932, y: 51.474}
+  m_AnchorMin: {x: 0.16081169, y: 0.38532773}
+  m_AnchorMax: {x: 0.27188405, y: 0.5}
+  m_AnchoredPosition: {x: 1.2899933, y: 0.9799957}
+  m_SizeDelta: {x: 0.2999878, y: -0.98999023}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &833096191
 MonoBehaviour:
@@ -1235,7 +1681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1267,9 +1713,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &833096194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 833096189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &868625632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,7 +1806,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 676.97125
+  orthographic size: 721.95447
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1354,10 +1830,9 @@ Transform:
   m_GameObject: {fileID: 868625632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children:
   - {fileID: 1130404717}
-  - {fileID: 1497752095}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1372,13 +1847,14 @@ GameObject:
   - component: {fileID: 935150256}
   - component: {fileID: 935150255}
   - component: {fileID: 935150257}
+  - component: {fileID: 935150258}
   m_Layer: 5
   m_Name: Cell 24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &935150254
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1386,16 +1862,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 935150253}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.066, y: 2.886}
-  m_SizeDelta: {x: 55.153, y: 52.994}
+  m_AnchorMin: {x: 0.050768096, y: 0.7228194}
+  m_AnchorMax: {x: 0.16081169, y: 0.8375084}
+  m_AnchoredPosition: {x: -0.020004272, y: 1.3999939}
+  m_SizeDelta: {x: 0.1000061, y: -0.7999878}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &935150255
 MonoBehaviour:
@@ -1409,7 +1885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1441,9 +1917,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &935150258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 935150253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &999700473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,13 +1961,14 @@ GameObject:
   - component: {fileID: 999700476}
   - component: {fileID: 999700475}
   - component: {fileID: 999700477}
+  - component: {fileID: 999700478}
   m_Layer: 5
   m_Name: Cell 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &999700474
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1469,16 +1976,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 999700473}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.576, y: -1.727}
-  m_SizeDelta: {x: 51.313, y: 52.994}
+  m_AnchorMin: {x: 0.5, y: 0.27481928}
+  m_AnchorMax: {x: 0.61365217, y: 0.38532773}
+  m_AnchoredPosition: {x: 0.5070038, y: 0.83999634}
+  m_SizeDelta: {x: -1, y: 0.9500122}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &999700475
 MonoBehaviour:
@@ -1492,7 +1999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1524,9 +2031,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &999700478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 999700473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1048829490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,13 +2075,14 @@ GameObject:
   - component: {fileID: 1048829493}
   - component: {fileID: 1048829492}
   - component: {fileID: 1048829494}
+  - component: {fileID: 1048829495}
   m_Layer: 5
   m_Name: Cell 27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1048829491
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1552,16 +2090,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1048829490}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.894, y: 2.886}
-  m_SizeDelta: {x: 53.233, y: 52.994}
+  m_AnchorMin: {x: 0.7278841, y: 0.7228194}
+  m_AnchorMax: {x: 0.8373043, y: 0.8375084}
+  m_AnchoredPosition: {x: -0.47207642, y: 0}
+  m_SizeDelta: {x: 1.6000061, y: -3.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1048829492
 MonoBehaviour:
@@ -1575,7 +2113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1607,9 +2145,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &1048829495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1048829490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1108898235
 GameObject:
   m_ObjectHideFlags: 0
@@ -1621,13 +2189,14 @@ GameObject:
   - component: {fileID: 1108898238}
   - component: {fileID: 1108898237}
   - component: {fileID: 1108898239}
+  - component: {fileID: 1108898240}
   m_Layer: 5
   m_Name: Cell 20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1108898236
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1635,16 +2204,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1108898235}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.902, y: 1.734}
-  m_SizeDelta: {x: 53.406, y: 54.914}
+  m_AnchorMin: {x: 0.16081169, y: 0.6103277}
+  m_AnchorMax: {x: 0.27188405, y: 0.7228194}
+  m_AnchoredPosition: {x: 0.5499878, y: 1}
+  m_SizeDelta: {x: -0.2000122, y: -1.1000061}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1108898237
 MonoBehaviour:
@@ -1658,7 +2227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1666,7 +2235,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1690,9 +2259,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &1108898240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1108898235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1130404714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1766,13 +2365,14 @@ GameObject:
   - component: {fileID: 1236569903}
   - component: {fileID: 1236569902}
   - component: {fileID: 1236569904}
+  - component: {fileID: 1236569905}
   m_Layer: 5
   m_Name: Cell 11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1236569901
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1780,16 +2380,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1236569900}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.896, y: -1.727}
-  m_SizeDelta: {x: 53.2, y: 52.994}
+  m_AnchorMin: {x: 0.71730435, y: 0.27481928}
+  m_AnchorMax: {x: 0.8373043, y: 0.38532773}
+  m_AnchoredPosition: {x: 2.1180725, y: 1.0800018}
+  m_SizeDelta: {x: -3.399994, y: 0.58999634}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1236569902
 MonoBehaviour:
@@ -1803,7 +2403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1835,9 +2435,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &1236569905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1236569900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1278479184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1849,13 +2479,14 @@ GameObject:
   - component: {fileID: 1278479187}
   - component: {fileID: 1278479186}
   - component: {fileID: 1278479188}
+  - component: {fileID: 1278479189}
   m_Layer: 5
   m_Name: Cell 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1278479185
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1863,16 +2494,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1278479184}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.888, y: -2.892}
-  m_SizeDelta: {x: 52.126, y: 52.994}
+  m_AnchorMin: {x: 0.16081169, y: 0.1601807}
+  m_AnchorMax: {x: 0.27188405, y: 0.27481928}
+  m_AnchoredPosition: {x: 0.8899994, y: 1.5}
+  m_SizeDelta: {x: -0.47000122, y: 0.980011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1278479186
 MonoBehaviour:
@@ -1886,7 +2517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1918,9 +2549,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &1278479189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1278479184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1293557400
 GameObject:
   m_ObjectHideFlags: 0
@@ -1932,13 +2593,14 @@ GameObject:
   - component: {fileID: 1293557404}
   - component: {fileID: 1293557403}
   - component: {fileID: 1293557402}
+  - component: {fileID: 1293557405}
   m_Layer: 5
   m_Name: Cell 22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1293557401
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1946,16 +2608,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1293557400}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.022188516, y: 0.022188516, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.74, y: 1.7369843}
-  m_SizeDelta: {x: 52.593, y: 54.274}
+  m_AnchorMin: {x: 0.61365217, y: 0.6103277}
+  m_AnchorMax: {x: 0.7278841, y: 0.7228194}
+  m_AnchoredPosition: {x: -0.54000854, y: 1}
+  m_SizeDelta: {x: -0.2999878, y: -1.1000061}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1293557402
 MonoBehaviour:
@@ -1968,7 +2630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
 --- !u!114 &1293557403
@@ -1983,7 +2645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2004,26 +2666,36 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1293557400}
---- !u!1 &1298139915 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1666401593560400, guid: 8bd95a07fbe0b42b8b7c28016faf8979,
-    type: 2}
-  m_PrefabInternal: {fileID: 1889396250}
---- !u!114 &1298139916
+--- !u!114 &1293557405
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1298139915}
+  m_GameObject: {fileID: 1293557400}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc9d96fb3040644afa9884fcbeb67362, type: 3}
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whitePawn: {fileID: 21300000, guid: 6a7444e5d0d77415d86efeb1b4a34622, type: 3}
-  whiteKing: {fileID: 21300000, guid: 5a12dce3978b641bfa580d6fa6df1d26, type: 3}
-  blackPawn: {fileID: 21300000, guid: 045a8572647fc400c8530f5fe7491740, type: 3}
-  blackKing: {fileID: 21300000, guid: fc8449fd9c6aa43c1a204edc4ec0ba98, type: 3}
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1322100232
 GameObject:
   m_ObjectHideFlags: 0
@@ -2035,13 +2707,14 @@ GameObject:
   - component: {fileID: 1322100235}
   - component: {fileID: 1322100234}
   - component: {fileID: 1322100236}
+  - component: {fileID: 1322100237}
   m_Layer: 5
   m_Name: Cell 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1322100233
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2049,16 +2722,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1322100232}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.75, y: -4.058}
-  m_SizeDelta: {x: 54.046, y: 53.634}
+  m_AnchorMin: {x: 0.27188405, y: 0.045508422}
+  m_AnchorMax: {x: 0.387116, y: 0.1601807}
+  m_AnchoredPosition: {x: 0.8159485, y: 2}
+  m_SizeDelta: {x: -0.6000061, y: -1.1000061}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1322100234
 MonoBehaviour:
@@ -2072,7 +2745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2080,7 +2753,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2104,9 +2777,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &1322100237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1322100232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1337682922
 GameObject:
   m_ObjectHideFlags: 0
@@ -2118,13 +2821,14 @@ GameObject:
   - component: {fileID: 1337682925}
   - component: {fileID: 1337682924}
   - component: {fileID: 1337682926}
+  - component: {fileID: 1337682927}
   m_Layer: 5
   m_Name: Cell 26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1337682923
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2132,16 +2836,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1337682922}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.576, y: 2.886}
-  m_SizeDelta: {x: 51.313, y: 52.994}
+  m_AnchorMin: {x: 0.5, y: 0.734}
+  m_AnchorMax: {x: 0.61365217, y: 0.8375084}
+  m_AnchoredPosition: {x: 0.2420044, y: -2.130005}
+  m_SizeDelta: {x: 0.5, y: 6.6500244}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1337682924
 MonoBehaviour:
@@ -2155,7 +2859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2187,9 +2891,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &1337682927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1337682922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1351866530
 GameObject:
   m_ObjectHideFlags: 0
@@ -2201,13 +2935,14 @@ GameObject:
   - component: {fileID: 1351866533}
   - component: {fileID: 1351866532}
   - component: {fileID: 1351866534}
+  - component: {fileID: 1351866535}
   m_Layer: 5
   m_Name: Cell 18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1351866531
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2215,16 +2950,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1351866530}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.576, y: 0.574}
-  m_SizeDelta: {x: 51.313, y: 52.994}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.61365217, y: 0.6103277}
+  m_AnchoredPosition: {x: 0.5070038, y: 1.026001}
+  m_SizeDelta: {x: -1, y: 1.460022}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1351866532
 MonoBehaviour:
@@ -2238,7 +2973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2270,9 +3005,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &1351866535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1351866530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1479842432
 GameObject:
   m_ObjectHideFlags: 0
@@ -2284,13 +3049,14 @@ GameObject:
   - component: {fileID: 1479842435}
   - component: {fileID: 1479842434}
   - component: {fileID: 1479842436}
+  - component: {fileID: 1479842437}
   m_Layer: 5
   m_Name: Cell 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1479842433
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2298,16 +3064,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1479842432}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.574, y: -4.058}
-  m_SizeDelta: {x: 53.674, y: 53.634}
+  m_AnchorMin: {x: 0.5, y: 0.045508422}
+  m_AnchorMax: {x: 0.61365217, y: 0.1601807}
+  m_AnchoredPosition: {x: 0.028999329, y: 2}
+  m_SizeDelta: {x: 0.1000061, y: -1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1479842434
 MonoBehaviour:
@@ -2321,7 +3087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2353,9 +3119,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &1479842437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1479842432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1497752094
 GameObject:
   m_ObjectHideFlags: 0
@@ -2384,8 +3180,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1889396251}
-  m_Father: {fileID: 868625637}
+  - {fileID: 1825218259}
+  - {fileID: 1782225946}
+  m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2420,10 +3217,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1000, y: 10000}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -2438,7 +3235,7 @@ Canvas:
   m_GameObject: {fileID: 1497752094}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 868625636}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -2461,13 +3258,14 @@ GameObject:
   - component: {fileID: 1598350339}
   - component: {fileID: 1598350338}
   - component: {fileID: 1598350340}
+  - component: {fileID: 1598350341}
   m_Layer: 5
   m_Name: Cell 15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1598350337
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2475,16 +3273,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1598350336}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.045, y: -0.563}
-  m_SizeDelta: {x: 54.046, y: 52.114}
+  m_AnchorMin: {x: 0.8373043, y: 0.38532773}
+  m_AnchorMax: {x: 0.94723195, y: 0.5}
+  m_AnchoredPosition: {x: 0.27999878, y: 1.1100159}
+  m_SizeDelta: {x: 0.7000122, y: -0.9700012}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1598350338
 MonoBehaviour:
@@ -2498,7 +3296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2530,9 +3328,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &1598350341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1598350336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1686376423
 GameObject:
   m_ObjectHideFlags: 0
@@ -2544,30 +3372,31 @@ GameObject:
   - component: {fileID: 1686376426}
   - component: {fileID: 1686376425}
   - component: {fileID: 1686376427}
+  - component: {fileID: 1686376428}
   m_Layer: 5
   m_Name: Cell 31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1686376424
 RectTransform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1686376423}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalRotation: {x: -0, y: -0, z: 0.007673855, w: 0.99997056}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 31
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4.05, y: 4.071}
-  m_SizeDelta: {x: 51.313, y: 52.994}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.87900007}
+  m_AnchorMin: {x: 0.8373043, y: 0.8375084}
+  m_AnchorMax: {x: 0.94723195, y: 0.9480001}
+  m_AnchoredPosition: {x: 0.3299408, y: 1.0799866}
+  m_SizeDelta: {x: 0.6000061, y: -0.05999756}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1686376425
 MonoBehaviour:
@@ -2581,7 +3410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2613,9 +3442,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &1686376428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1686376423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &1725096819
 GameObject:
   m_ObjectHideFlags: 0
@@ -2627,13 +3486,14 @@ GameObject:
   - component: {fileID: 1725096822}
   - component: {fileID: 1725096821}
   - component: {fileID: 1725096823}
+  - component: {fileID: 1725096824}
   m_Layer: 5
   m_Name: Cell 30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1725096820
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2641,16 +3501,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1725096819}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.7242, y: 4.0654}
-  m_SizeDelta: {x: 52.5618, y: 53.2984}
+  m_AnchorMin: {x: 0.61365217, y: 0.8375084}
+  m_AnchorMax: {x: 0.7278841, y: 0.9480001}
+  m_AnchoredPosition: {x: -0.89801025, y: 1.0799866}
+  m_SizeDelta: {x: -1, y: -0.05999756}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1725096821
 MonoBehaviour:
@@ -2664,7 +3524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2696,9 +3556,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &1725096824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1725096819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!4 &1782225946 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4284386432937370, guid: cf8f6920e66284f3f955e16a5c5fb9ae,
+    type: 2}
+  m_PrefabInternal: {fileID: 648255065}
 --- !u!1 &1783331959
 GameObject:
   m_ObjectHideFlags: 0
@@ -2710,13 +3605,14 @@ GameObject:
   - component: {fileID: 1783331962}
   - component: {fileID: 1783331961}
   - component: {fileID: 1783331963}
+  - component: {fileID: 1783331964}
   m_Layer: 5
   m_Name: Cell 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1783331960
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2724,17 +3620,17 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1783331959}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.073, y: -1.727}
-  m_SizeDelta: {x: 53.233, y: 52.994}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.050768096, y: 0.27481928}
+  m_AnchorMax: {x: 0.16081169, y: 0.38532773}
+  m_AnchoredPosition: {x: 0.16000366, y: 1.0800011}
+  m_SizeDelta: {x: 0.5, y: 0.58999634}
+  m_Pivot: {x: 0.5, y: 0.49999994}
 --- !u!114 &1783331961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2747,7 +3643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2779,68 +3675,155 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
---- !u!1001 &1889396250
-Prefab:
+--- !u!114 &1783331964
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1497752095}
-    m_Modifications:
-    - target: {fileID: 4915673883665016, guid: 8bd95a07fbe0b42b8b7c28016faf8979, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915673883665016, guid: 8bd95a07fbe0b42b8b7c28016faf8979, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915673883665016, guid: 8bd95a07fbe0b42b8b7c28016faf8979, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915673883665016, guid: 8bd95a07fbe0b42b8b7c28016faf8979, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915673883665016, guid: 8bd95a07fbe0b42b8b7c28016faf8979, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915673883665016, guid: 8bd95a07fbe0b42b8b7c28016faf8979, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915673883665016, guid: 8bd95a07fbe0b42b8b7c28016faf8979, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915673883665016, guid: 8bd95a07fbe0b42b8b7c28016faf8979, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915673883665016, guid: 8bd95a07fbe0b42b8b7c28016faf8979, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 45.068386
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915673883665016, guid: 8bd95a07fbe0b42b8b7c28016faf8979, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 45.068386
-      objectReference: {fileID: 0}
-    - target: {fileID: 4915673883665016, guid: 8bd95a07fbe0b42b8b7c28016faf8979, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 8bd95a07fbe0b42b8b7c28016faf8979, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &1889396251 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4915673883665016, guid: 8bd95a07fbe0b42b8b7c28016faf8979,
-    type: 2}
-  m_PrefabInternal: {fileID: 1889396250}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1783331959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
+--- !u!1 &1825218258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1825218259}
+  - component: {fileID: 1825218262}
+  - component: {fileID: 1825218261}
+  - component: {fileID: 1825218260}
+  m_Layer: 5
+  m_Name: PieceBoard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1825218259
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1825218258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 575621643}
+  - {fileID: 1322100233}
+  - {fileID: 1479842433}
+  - {fileID: 287133073}
+  - {fileID: 1278479185}
+  - {fileID: 2108516439}
+  - {fileID: 222860567}
+  - {fileID: 124474366}
+  - {fileID: 1783331960}
+  - {fileID: 467499281}
+  - {fileID: 999700474}
+  - {fileID: 1236569901}
+  - {fileID: 833096190}
+  - {fileID: 2000353834}
+  - {fileID: 291271043}
+  - {fileID: 1598350337}
+  - {fileID: 555546907}
+  - {fileID: 537444618}
+  - {fileID: 1351866531}
+  - {fileID: 777658263}
+  - {fileID: 1108898236}
+  - {fileID: 527294674}
+  - {fileID: 1293557401}
+  - {fileID: 401569831}
+  - {fileID: 935150254}
+  - {fileID: 762721044}
+  - {fileID: 1337682923}
+  - {fileID: 1048829491}
+  - {fileID: 2059144630}
+  - {fileID: 22834785}
+  - {fileID: 1725096820}
+  - {fileID: 1686376424}
+  m_Father: {fileID: 1497752095}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.0000097752, y: -0.00000095367}
+  m_SizeDelta: {x: -527.4, y: -251.7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1825218260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1825218258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc9d96fb3040644afa9884fcbeb67362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whitePawn: {fileID: 21300000, guid: 6a7444e5d0d77415d86efeb1b4a34622, type: 3}
+  whiteKing: {fileID: 21300000, guid: 5a12dce3978b641bfa580d6fa6df1d26, type: 3}
+  blackPawn: {fileID: 21300000, guid: 045a8572647fc400c8530f5fe7491740, type: 3}
+  blackKing: {fileID: 21300000, guid: fc8449fd9c6aa43c1a204edc4ec0ba98, type: 3}
+--- !u!114 &1825218261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1825218258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: aafd4b8b4134447bcb4d09cd957cd826, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1825218262
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1825218258}
 --- !u!1 &2000353833
 GameObject:
   m_ObjectHideFlags: 0
@@ -2852,13 +3835,14 @@ GameObject:
   - component: {fileID: 2000353836}
   - component: {fileID: 2000353835}
   - component: {fileID: 2000353837}
+  - component: {fileID: 2000353838}
   m_Layer: 5
   m_Name: Cell 13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2000353834
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2866,16 +3850,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2000353833}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.573, y: -0.553}
-  m_SizeDelta: {x: 52.126, y: 52.994}
+  m_AnchorMin: {x: 0.387116, y: 0.38532773}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.72198486, y: 0.9799957}
+  m_SizeDelta: {x: -1.5, y: -0.98999023}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2000353835
 MonoBehaviour:
@@ -2889,7 +3873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2921,9 +3905,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &2000353838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2000353833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &2059144629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2935,13 +3949,14 @@ GameObject:
   - component: {fileID: 2059144632}
   - component: {fileID: 2059144631}
   - component: {fileID: 2059144633}
+  - component: {fileID: 2059144634}
   m_Layer: 5
   m_Name: Cell 28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2059144630
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2949,16 +3964,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2059144629}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -2.9, y: 4.062}
-  m_SizeDelta: {x: 51.313, y: 52.994}
+  m_AnchorMin: {x: 0.16081169, y: 0.8375084}
+  m_AnchorMax: {x: 0.27188405, y: 0.9480001}
+  m_AnchoredPosition: {x: 0.89004517, y: 1.0500183}
+  m_SizeDelta: {x: -0.5, y: -0.10998535}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2059144631
 MonoBehaviour:
@@ -2972,7 +3987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3004,9 +4019,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &2059144634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2059144629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []
 --- !u!1 &2108516438
 GameObject:
   m_ObjectHideFlags: 0
@@ -3018,13 +4063,14 @@ GameObject:
   - component: {fileID: 2108516441}
   - component: {fileID: 2108516440}
   - component: {fileID: 2108516442}
+  - component: {fileID: 2108516443}
   m_Layer: 5
   m_Name: Cell 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2108516439
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3032,16 +4078,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2108516438}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 99}
-  m_LocalScale: {x: 0.022188503, y: 0.022188503, z: 1.9969652}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
-  m_Father: {fileID: 1889396251}
+  m_Father: {fileID: 1825218259}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.573, y: -2.892}
-  m_SizeDelta: {x: 52.126, y: 52.994}
+  m_AnchorMin: {x: 0.387116, y: 0.1601807}
+  m_AnchorMax: {x: 0.5, y: 0.27481928}
+  m_AnchoredPosition: {x: -0.27799988, y: 1.5}
+  m_SizeDelta: {x: -1.5, y: 0.980011}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2108516440
 MonoBehaviour:
@@ -3055,7 +4101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.447}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3087,6 +4133,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Board: {fileID: 1298139915}
+  Board: {fileID: 1825218258}
   Color: 0
   CheckerType: 0
+--- !u!114 &2108516443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2108516438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1825218260}
+          m_MethodName: handleCellClick
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  delegates: []

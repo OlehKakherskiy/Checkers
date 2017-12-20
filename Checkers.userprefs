@@ -1,9 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/core/Board.cs">
     <Files>
-      <File FileName="Assets/core/Piece.cs" Line="59" Column="3" />
-      <File FileName="Assets/core/Board.cs" Line="8" Column="4" />
+      <File FileName="Assets/core/Piece.cs" Line="41" Column="34" />
+      <File FileName="Assets/core/Board.cs" Line="27" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
