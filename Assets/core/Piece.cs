@@ -6,71 +6,60 @@ using System.Linq;
 
 public enum Color
 {
-	WHITE = 1, BLACK = -1, NONE = 0
+	WHITE = 1, BLACK = -1
 }
 public enum Type {
 	PAWN,
-	KING,
-	NONE
+	KING
 }
-public class Piece : MonoBehaviour {
+public class Piece {
 
 	private static readonly int SIMPLE_MOVEMENT = 1;
 	private static readonly int FIGHT_MOVEMENT = 2;
 	private static readonly int MAX_VALID_CHECKERS_COUNT_BETWEEN_POSITIONS = 1;
 
-	public GameObject Board;
+	private Color color;
+	private Type checkerType;
+	private BoardManager boardManager;
 
-	private Board GameBoard;
-
-	public Color Color;
-	public Type CheckerType;
-
-	private Position currentPosition;
-
-	public Position CurrentPosition {
+	public Color Color {
 		get {
-			return this.currentPosition;
-		}
-		set {
-			currentPosition = value;
+			return this.color;
 		}
 	}
 
-	public void OnClick() {
-		Debug.Log ("was click on "+transform.parent.name);
+	public Type CheckerType {
+		get {
+			return this.checkerType;
+		}
 	}
 
-	public void Start() {
-		GameBoard = Board.GetComponent<Board> ();
+	public Piece(Color color, Type type, BoardManager boardManager) {
+		this.color = color;
+		this.checkerType = type;
+		this.boardManager = boardManager;
 	}
 
-	public Piece(Color color, Type type, Position currentPosition) {
-		this.Color = color;
-		this.CheckerType = type;
-		this.currentPosition = currentPosition;
-	}
-
-	public void doMovement(Position To) {
-		Position From = this.CurrentPosition;
+	public bool doMovement(Position From, Position To) {
 		if (!isValidMovement (From, To)) {
-			return;
+			return false;
 		}
 		if (isFightMovement (From, To)) {
 			performFightMovement (From, To);
 		} else {
 			performSimpleMovement (From, To);
 		}
+		return true;
 	}
 
 	private Boolean isValidMovement(Position From, Position To) {
-		return basicValidationIsOk (From, To) && isValidCheckersCountBetween (GameBoard.GetCheckersBetween (From, To), From, To);
+		return basicValidationIsOk (From, To) && isValidCheckersCountBetween (boardManager.GetCheckersBetween (From, To), From, To);
 	}
 
 	private Boolean basicValidationIsOk(Position From, Position To) {
 		int DeltaX = Math.Abs (From.X - To.X);
 		int DeltaY = Math.Abs (From.Y - To.Y);
-		if (this.CheckerType == Type.PAWN) {
+		if (this.checkerType == Type.PAWN) {
 			return DeltaX == DeltaY && ((DeltaX == SIMPLE_MOVEMENT && MovementValidationForTypeIsOk(From, To)) || DeltaX == FIGHT_MOVEMENT);
 		} else {
 			return DeltaX == DeltaY;
@@ -78,41 +67,45 @@ public class Piece : MonoBehaviour {
 	}
 		
 	private Boolean MovementValidationForTypeIsOk(Position From, Position To) {
-		return From.Y - To.Y == (int) this.Color; //in case of White checker deltaY should be positive (because we're moving from 1 to 8 rows), in case of black - should be negative
+		return To.Y - From.Y == (int) this.color; //in case of White checker deltaY should be positive (because we're moving from 1 to 8 rows), in case of black - should be negative
 	}
 
-	private Boolean isValidCheckersCountBetween(List<Piece> checkersBetween, Position From, Position To) {
+	private Boolean isValidCheckersCountBetween(List<Position> checkersBetween, Position From, Position To) {
 		if (checkersBetween.Count > MAX_VALID_CHECKERS_COUNT_BETWEEN_POSITIONS) {
+			return false;
+		}
+		if (isFightMovement (From, To) && checkersBetween.Count == 0) {
 			return false;
 		}
 		if (checkersBetween.Count == MAX_VALID_CHECKERS_COUNT_BETWEEN_POSITIONS) {
 			return isEnemyChecker (checkersBetween.ElementAt (0));
 		}
-		return false;
+		return true;
 	}
 
-	private Boolean isEnemyChecker(Piece checker) {
-		return this.Color != checker.Color;
+	private Boolean isEnemyChecker(Position checkerPosition) {
+		return this.color != boardManager.GetPiece(checkerPosition).Color;
 	}
 
 	private Boolean isFightMovement(Position From, Position To) {
-		return (From.X - To.X) == FIGHT_MOVEMENT;
+		return Math.Abs(From.X - To.X) == FIGHT_MOVEMENT;
 	}
 
 	private void performFightMovement(Position From, Position To) {
-		Piece eatenChecker = GameBoard.GetCheckersBetween (From, To).ElementAt (0);
-		GameBoard.RemoveChecker (eatenChecker);
-		GameBoard.MoveChecker (this, To);
+		Position eatenChecker = boardManager.GetCheckersBetween (From, To).ElementAt (0);
+		Debug.Log ("Should be eaten checker with pos " + eatenChecker);
+		boardManager.MoveChecker (this, From, To);
+		boardManager.RemoveChecker (eatenChecker);
 	}
 
 	private void performSimpleMovement(Position From, Position To) {
-		GameBoard.MoveChecker (this, To);
-		if(isBecomeAKing(To)){
-			this.CheckerType = Type.KING;
+		if (isBecomeAKing(To)) {
+			this.checkerType = Type.KING;
 		}
+		boardManager.MoveChecker (this, From, To);
 	}
 
 	private Boolean isBecomeAKing(Position To) {
-		return ((this.CheckerType == Type.PAWN) && ((this.Color == Color.WHITE && To.Y == 8) || (this.Color == Color.BLACK && To.Y == 1)));
+		return ((this.checkerType == Type.PAWN) && ((this.color == Color.WHITE && To.Y == 7) || (this.Color == Color.BLACK && To.Y == 0)));
 	}
 }

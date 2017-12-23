@@ -118,7 +118,6 @@ GameObject:
   - component: {fileID: 22834785}
   - component: {fileID: 22834787}
   - component: {fileID: 22834786}
-  - component: {fileID: 22834788}
   - component: {fileID: 22834789}
   m_Layer: 5
   m_Name: Cell 29
@@ -126,7 +125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &22834785
 RectTransform:
   m_ObjectHideFlags: 0
@@ -157,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -178,20 +177,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 22834784}
---- !u!114 &22834788
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 22834784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &22834789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,11 +194,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 22834784}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -232,7 +217,6 @@ GameObject:
   - component: {fileID: 124474366}
   - component: {fileID: 124474368}
   - component: {fileID: 124474367}
-  - component: {fileID: 124474369}
   - component: {fileID: 124474370}
   m_Layer: 5
   m_Name: Cell 7
@@ -240,7 +224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &124474366
 RectTransform:
   m_ObjectHideFlags: 0
@@ -271,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -292,20 +276,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 124474365}
---- !u!114 &124474369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 124474365}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &124474370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,11 +293,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 124474365}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -346,7 +316,6 @@ GameObject:
   - component: {fileID: 222860567}
   - component: {fileID: 222860569}
   - component: {fileID: 222860568}
-  - component: {fileID: 222860570}
   - component: {fileID: 222860571}
   m_Layer: 5
   m_Name: Cell 6
@@ -354,7 +323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &222860567
 RectTransform:
   m_ObjectHideFlags: 0
@@ -385,7 +354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -406,20 +375,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 222860566}
---- !u!114 &222860570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 222860566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &222860571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,11 +392,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 222860566}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -460,7 +415,6 @@ GameObject:
   - component: {fileID: 287133073}
   - component: {fileID: 287133075}
   - component: {fileID: 287133074}
-  - component: {fileID: 287133076}
   - component: {fileID: 287133077}
   m_Layer: 5
   m_Name: Cell 3
@@ -468,7 +422,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &287133073
 RectTransform:
   m_ObjectHideFlags: 0
@@ -499,7 +453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -520,20 +474,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 287133072}
---- !u!114 &287133076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 287133072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &287133077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -551,11 +491,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 287133072}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -574,7 +514,6 @@ GameObject:
   - component: {fileID: 291271043}
   - component: {fileID: 291271045}
   - component: {fileID: 291271044}
-  - component: {fileID: 291271046}
   - component: {fileID: 291271047}
   m_Layer: 5
   m_Name: Cell 14
@@ -582,7 +521,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &291271043
 RectTransform:
   m_ObjectHideFlags: 0
@@ -613,7 +552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -634,20 +573,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 291271042}
---- !u!114 &291271046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 291271042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &291271047
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -665,11 +590,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 291271042}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -688,7 +613,6 @@ GameObject:
   - component: {fileID: 401569831}
   - component: {fileID: 401569833}
   - component: {fileID: 401569832}
-  - component: {fileID: 401569834}
   - component: {fileID: 401569835}
   m_Layer: 5
   m_Name: Cell 23
@@ -696,7 +620,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &401569831
 RectTransform:
   m_ObjectHideFlags: 0
@@ -727,7 +651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -748,20 +672,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 401569830}
---- !u!114 &401569834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 401569830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &401569835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -779,11 +689,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 401569830}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -802,7 +712,6 @@ GameObject:
   - component: {fileID: 467499281}
   - component: {fileID: 467499283}
   - component: {fileID: 467499282}
-  - component: {fileID: 467499284}
   - component: {fileID: 467499285}
   m_Layer: 5
   m_Name: Cell 9
@@ -810,7 +719,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &467499281
 RectTransform:
   m_ObjectHideFlags: 0
@@ -841,7 +750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -862,20 +771,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 467499280}
---- !u!114 &467499284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 467499280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &467499285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -893,11 +788,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 467499280}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -916,7 +811,6 @@ GameObject:
   - component: {fileID: 527294674}
   - component: {fileID: 527294676}
   - component: {fileID: 527294675}
-  - component: {fileID: 527294677}
   - component: {fileID: 527294678}
   m_Layer: 5
   m_Name: Cell 21
@@ -924,7 +818,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &527294674
 RectTransform:
   m_ObjectHideFlags: 0
@@ -955,7 +849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -976,20 +870,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 527294673}
---- !u!114 &527294677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 527294673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &527294678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1007,11 +887,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 527294673}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -1030,7 +910,6 @@ GameObject:
   - component: {fileID: 537444618}
   - component: {fileID: 537444620}
   - component: {fileID: 537444619}
-  - component: {fileID: 537444621}
   - component: {fileID: 537444622}
   m_Layer: 5
   m_Name: Cell 17
@@ -1038,7 +917,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &537444618
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1069,7 +948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1090,20 +969,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 537444617}
---- !u!114 &537444621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 537444617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &537444622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1121,11 +986,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 537444617}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -1144,7 +1009,6 @@ GameObject:
   - component: {fileID: 555546907}
   - component: {fileID: 555546909}
   - component: {fileID: 555546908}
-  - component: {fileID: 555546910}
   - component: {fileID: 555546911}
   m_Layer: 5
   m_Name: Cell 16
@@ -1152,7 +1016,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &555546907
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1183,7 +1047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1204,20 +1068,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 555546906}
---- !u!114 &555546910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 555546906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &555546911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1235,11 +1085,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 555546906}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -1258,7 +1108,6 @@ GameObject:
   - component: {fileID: 575621643}
   - component: {fileID: 575621645}
   - component: {fileID: 575621644}
-  - component: {fileID: 575621646}
   - component: {fileID: 575621647}
   m_Layer: 5
   m_Name: Cell 0
@@ -1266,7 +1115,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &575621643
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1297,7 +1146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1318,20 +1167,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 575621642}
---- !u!114 &575621646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 575621642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &575621647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1349,11 +1184,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 575621642}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -1362,48 +1197,6 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
---- !u!1001 &648255065
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1497752095}
-    m_Modifications:
-    - target: {fileID: 4284386432937370, guid: cf8f6920e66284f3f955e16a5c5fb9ae, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -1640.0685
-      objectReference: {fileID: 0}
-    - target: {fileID: 4284386432937370, guid: cf8f6920e66284f3f955e16a5c5fb9ae, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 448.03265
-      objectReference: {fileID: 0}
-    - target: {fileID: 4284386432937370, guid: cf8f6920e66284f3f955e16a5c5fb9ae, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4284386432937370, guid: cf8f6920e66284f3f955e16a5c5fb9ae, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4284386432937370, guid: cf8f6920e66284f3f955e16a5c5fb9ae, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4284386432937370, guid: cf8f6920e66284f3f955e16a5c5fb9ae, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4284386432937370, guid: cf8f6920e66284f3f955e16a5c5fb9ae, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4284386432937370, guid: cf8f6920e66284f3f955e16a5c5fb9ae, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: cf8f6920e66284f3f955e16a5c5fb9ae, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &762721043
 GameObject:
   m_ObjectHideFlags: 0
@@ -1414,7 +1207,6 @@ GameObject:
   - component: {fileID: 762721044}
   - component: {fileID: 762721046}
   - component: {fileID: 762721045}
-  - component: {fileID: 762721047}
   - component: {fileID: 762721048}
   m_Layer: 5
   m_Name: Cell 25
@@ -1422,7 +1214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &762721044
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1453,7 +1245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1474,20 +1266,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 762721043}
---- !u!114 &762721047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 762721043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &762721048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1505,11 +1283,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 762721043}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -1528,7 +1306,6 @@ GameObject:
   - component: {fileID: 777658263}
   - component: {fileID: 777658265}
   - component: {fileID: 777658264}
-  - component: {fileID: 777658266}
   - component: {fileID: 777658267}
   m_Layer: 5
   m_Name: Cell 19
@@ -1536,7 +1313,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &777658263
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1567,7 +1344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1588,20 +1365,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 777658262}
---- !u!114 &777658266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 777658262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &777658267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1619,11 +1382,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 777658262}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -1642,7 +1405,6 @@ GameObject:
   - component: {fileID: 833096190}
   - component: {fileID: 833096192}
   - component: {fileID: 833096191}
-  - component: {fileID: 833096193}
   - component: {fileID: 833096194}
   m_Layer: 5
   m_Name: Cell 12
@@ -1650,7 +1412,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &833096190
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1681,7 +1443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1702,20 +1464,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 833096189}
---- !u!114 &833096193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 833096189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &833096194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1733,11 +1481,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 833096189}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -1831,8 +1579,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 100, y: 100, z: 1}
-  m_Children:
-  - {fileID: 1130404717}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1846,7 +1593,6 @@ GameObject:
   - component: {fileID: 935150254}
   - component: {fileID: 935150256}
   - component: {fileID: 935150255}
-  - component: {fileID: 935150257}
   - component: {fileID: 935150258}
   m_Layer: 5
   m_Name: Cell 24
@@ -1854,7 +1600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &935150254
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1885,7 +1631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1906,20 +1652,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 935150253}
---- !u!114 &935150257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 935150253}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &935150258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1937,11 +1669,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 935150253}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -1960,7 +1692,6 @@ GameObject:
   - component: {fileID: 999700474}
   - component: {fileID: 999700476}
   - component: {fileID: 999700475}
-  - component: {fileID: 999700477}
   - component: {fileID: 999700478}
   m_Layer: 5
   m_Name: Cell 10
@@ -1968,7 +1699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &999700474
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1999,7 +1730,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2020,20 +1751,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 999700473}
---- !u!114 &999700477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 999700473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &999700478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2051,11 +1768,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 999700473}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2074,7 +1791,6 @@ GameObject:
   - component: {fileID: 1048829491}
   - component: {fileID: 1048829493}
   - component: {fileID: 1048829492}
-  - component: {fileID: 1048829494}
   - component: {fileID: 1048829495}
   m_Layer: 5
   m_Name: Cell 27
@@ -2082,7 +1798,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1048829491
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2113,7 +1829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2134,20 +1850,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1048829490}
---- !u!114 &1048829494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1048829490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &1048829495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2165,11 +1867,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1048829490}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2188,7 +1890,6 @@ GameObject:
   - component: {fileID: 1108898236}
   - component: {fileID: 1108898238}
   - component: {fileID: 1108898237}
-  - component: {fileID: 1108898239}
   - component: {fileID: 1108898240}
   m_Layer: 5
   m_Name: Cell 20
@@ -2196,7 +1897,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1108898236
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2227,7 +1928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2248,20 +1949,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1108898235}
---- !u!114 &1108898239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1108898235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &1108898240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2279,11 +1966,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1108898235}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2348,11 +2035,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1130404714}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -500.00003, y: -512.6316, z: 23.157896}
+  m_LocalScale: {x: 210.52632, y: 210.52632, z: 2.1052632}
   m_Children: []
-  m_Father: {fileID: 868625637}
-  m_RootOrder: 0
+  m_Father: {fileID: 1497752095}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1236569900
 GameObject:
@@ -2364,7 +2051,6 @@ GameObject:
   - component: {fileID: 1236569901}
   - component: {fileID: 1236569903}
   - component: {fileID: 1236569902}
-  - component: {fileID: 1236569904}
   - component: {fileID: 1236569905}
   m_Layer: 5
   m_Name: Cell 11
@@ -2372,7 +2058,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1236569901
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2403,7 +2089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2424,20 +2110,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1236569900}
---- !u!114 &1236569904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1236569900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &1236569905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2455,11 +2127,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1236569900}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2478,7 +2150,6 @@ GameObject:
   - component: {fileID: 1278479185}
   - component: {fileID: 1278479187}
   - component: {fileID: 1278479186}
-  - component: {fileID: 1278479188}
   - component: {fileID: 1278479189}
   m_Layer: 5
   m_Name: Cell 4
@@ -2486,7 +2157,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1278479185
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2517,7 +2188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2538,20 +2209,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1278479184}
---- !u!114 &1278479188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1278479184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &1278479189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2569,11 +2226,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1278479184}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2592,7 +2249,6 @@ GameObject:
   - component: {fileID: 1293557401}
   - component: {fileID: 1293557404}
   - component: {fileID: 1293557403}
-  - component: {fileID: 1293557402}
   - component: {fileID: 1293557405}
   m_Layer: 5
   m_Name: Cell 22
@@ -2600,7 +2256,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1293557401
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2619,20 +2275,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.54000854, y: 1}
   m_SizeDelta: {x: -0.2999878, y: -1.1000061}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1293557402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1293557400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &1293557403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2645,7 +2287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2683,11 +2325,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1293557400}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2706,7 +2348,6 @@ GameObject:
   - component: {fileID: 1322100233}
   - component: {fileID: 1322100235}
   - component: {fileID: 1322100234}
-  - component: {fileID: 1322100236}
   - component: {fileID: 1322100237}
   m_Layer: 5
   m_Name: Cell 1
@@ -2714,7 +2355,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1322100233
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2745,7 +2386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2766,20 +2407,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1322100232}
---- !u!114 &1322100236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1322100232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &1322100237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2797,11 +2424,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1322100232}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2820,7 +2447,6 @@ GameObject:
   - component: {fileID: 1337682923}
   - component: {fileID: 1337682925}
   - component: {fileID: 1337682924}
-  - component: {fileID: 1337682926}
   - component: {fileID: 1337682927}
   m_Layer: 5
   m_Name: Cell 26
@@ -2828,7 +2454,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1337682923
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2859,7 +2485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2880,20 +2506,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1337682922}
---- !u!114 &1337682926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1337682922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &1337682927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2911,11 +2523,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1337682922}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2934,7 +2546,6 @@ GameObject:
   - component: {fileID: 1351866531}
   - component: {fileID: 1351866533}
   - component: {fileID: 1351866532}
-  - component: {fileID: 1351866534}
   - component: {fileID: 1351866535}
   m_Layer: 5
   m_Name: Cell 18
@@ -2942,7 +2553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1351866531
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2973,7 +2584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2994,20 +2605,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1351866530}
---- !u!114 &1351866534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1351866530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &1351866535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3025,11 +2622,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1351866530}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -3048,7 +2645,6 @@ GameObject:
   - component: {fileID: 1479842433}
   - component: {fileID: 1479842435}
   - component: {fileID: 1479842434}
-  - component: {fileID: 1479842436}
   - component: {fileID: 1479842437}
   m_Layer: 5
   m_Name: Cell 2
@@ -3056,7 +2652,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1479842433
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3087,7 +2683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3108,20 +2704,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1479842432}
---- !u!114 &1479842436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1479842432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &1479842437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3139,11 +2721,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1479842432}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -3181,7 +2763,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1825218259}
-  - {fileID: 1782225946}
+  - {fileID: 1130404717}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3257,7 +2839,6 @@ GameObject:
   - component: {fileID: 1598350337}
   - component: {fileID: 1598350339}
   - component: {fileID: 1598350338}
-  - component: {fileID: 1598350340}
   - component: {fileID: 1598350341}
   m_Layer: 5
   m_Name: Cell 15
@@ -3265,7 +2846,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1598350337
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3296,7 +2877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3317,20 +2898,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1598350336}
---- !u!114 &1598350340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1598350336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &1598350341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3348,11 +2915,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1598350336}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -3371,7 +2938,6 @@ GameObject:
   - component: {fileID: 1686376424}
   - component: {fileID: 1686376426}
   - component: {fileID: 1686376425}
-  - component: {fileID: 1686376427}
   - component: {fileID: 1686376428}
   m_Layer: 5
   m_Name: Cell 31
@@ -3379,7 +2945,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1686376424
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3410,7 +2976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3431,20 +2997,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1686376423}
---- !u!114 &1686376427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1686376423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &1686376428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3462,11 +3014,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1686376423}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -3485,7 +3037,6 @@ GameObject:
   - component: {fileID: 1725096820}
   - component: {fileID: 1725096822}
   - component: {fileID: 1725096821}
-  - component: {fileID: 1725096823}
   - component: {fileID: 1725096824}
   m_Layer: 5
   m_Name: Cell 30
@@ -3493,7 +3044,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1725096820
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3524,7 +3075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3545,20 +3096,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1725096819}
---- !u!114 &1725096823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1725096819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &1725096824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3576,11 +3113,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1725096819}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -3589,11 +3126,6 @@ MonoBehaviour:
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
---- !u!4 &1782225946 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4284386432937370, guid: cf8f6920e66284f3f955e16a5c5fb9ae,
-    type: 2}
-  m_PrefabInternal: {fileID: 648255065}
 --- !u!1 &1783331959
 GameObject:
   m_ObjectHideFlags: 0
@@ -3604,7 +3136,6 @@ GameObject:
   - component: {fileID: 1783331960}
   - component: {fileID: 1783331962}
   - component: {fileID: 1783331961}
-  - component: {fileID: 1783331963}
   - component: {fileID: 1783331964}
   m_Layer: 5
   m_Name: Cell 8
@@ -3612,7 +3143,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1783331960
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3643,7 +3174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3664,20 +3195,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1783331959}
---- !u!114 &1783331963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1783331959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &1783331964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3695,11 +3212,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 1783331959}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -3718,6 +3235,7 @@ GameObject:
   - component: {fileID: 1825218259}
   - component: {fileID: 1825218262}
   - component: {fileID: 1825218261}
+  - component: {fileID: 1825218263}
   - component: {fileID: 1825218260}
   m_Layer: 5
   m_Name: PieceBoard
@@ -3784,13 +3302,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1825218258}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc9d96fb3040644afa9884fcbeb67362, type: 3}
+  m_Script: {fileID: 11500000, guid: 99e56d0d213bb496d9d12960db484558, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whitePawn: {fileID: 21300000, guid: 6a7444e5d0d77415d86efeb1b4a34622, type: 3}
-  whiteKing: {fileID: 21300000, guid: 5a12dce3978b641bfa580d6fa6df1d26, type: 3}
-  blackPawn: {fileID: 21300000, guid: 045a8572647fc400c8530f5fe7491740, type: 3}
-  blackKing: {fileID: 21300000, guid: fc8449fd9c6aa43c1a204edc4ec0ba98, type: 3}
+  BoardView: {fileID: 1825218263}
 --- !u!114 &1825218261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3824,6 +3339,21 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1825218258}
+--- !u!114 &1825218263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1825218258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66e7ddede96e4bac9fe5d2b05073e00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WhitePawn: {fileID: 21300000, guid: 6a7444e5d0d77415d86efeb1b4a34622, type: 3}
+  WhiteKing: {fileID: 21300000, guid: 5a12dce3978b641bfa580d6fa6df1d26, type: 3}
+  BlackPawn: {fileID: 21300000, guid: 045a8572647fc400c8530f5fe7491740, type: 3}
+  BlackKing: {fileID: 21300000, guid: fc8449fd9c6aa43c1a204edc4ec0ba98, type: 3}
 --- !u!1 &2000353833
 GameObject:
   m_ObjectHideFlags: 0
@@ -3834,7 +3364,6 @@ GameObject:
   - component: {fileID: 2000353834}
   - component: {fileID: 2000353836}
   - component: {fileID: 2000353835}
-  - component: {fileID: 2000353837}
   - component: {fileID: 2000353838}
   m_Layer: 5
   m_Name: Cell 13
@@ -3842,7 +3371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2000353834
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3873,7 +3402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3894,20 +3423,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2000353833}
---- !u!114 &2000353837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2000353833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &2000353838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3925,11 +3440,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 2000353833}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -3948,7 +3463,6 @@ GameObject:
   - component: {fileID: 2059144630}
   - component: {fileID: 2059144632}
   - component: {fileID: 2059144631}
-  - component: {fileID: 2059144633}
   - component: {fileID: 2059144634}
   m_Layer: 5
   m_Name: Cell 28
@@ -3956,7 +3470,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2059144630
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3987,7 +3501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4008,20 +3522,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2059144629}
---- !u!114 &2059144633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2059144629}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &2059144634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4039,11 +3539,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 2059144629}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -4062,7 +3562,6 @@ GameObject:
   - component: {fileID: 2108516439}
   - component: {fileID: 2108516441}
   - component: {fileID: 2108516440}
-  - component: {fileID: 2108516442}
   - component: {fileID: 2108516443}
   m_Layer: 5
   m_Name: Cell 5
@@ -4070,7 +3569,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2108516439
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4101,7 +3600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4122,20 +3621,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2108516438}
---- !u!114 &2108516442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2108516438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2683a910b8ec64b9d8b67b66828f6670, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Board: {fileID: 1825218258}
-  Color: 0
-  CheckerType: 0
 --- !u!114 &2108516443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4153,11 +3638,11 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1825218260}
-          m_MethodName: handleCellClick
-          m_Mode: 1
+          m_MethodName: HandleCellClick
+          m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgument: {fileID: 2108516438}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
