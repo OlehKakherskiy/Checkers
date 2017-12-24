@@ -72,7 +72,7 @@ public class Piece {
 	}
 		
 	private Boolean MovementValidationForTypeIsOk(Position From, Position To) {
-		return To.Y - From.Y == (int) this.color; //in case of White checker deltaY should be positive (because we're moving from 1 to 8 rows), in case of black - should be negative
+		return Math.Sign(To.Y - From.Y) == (int) this.color; //in case of White checker deltaY should be positive (because we're moving from 1 to 8 rows), in case of black - should be negative
 	}
 
 	private Boolean isValidCheckersCountBetween(List<Position> checkersBetween, Position From, Position To) {

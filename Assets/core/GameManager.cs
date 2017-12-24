@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
 	private static readonly int PIECES_IN_ROW = 4;
 
 	public BoardView BoardView;
+	public GameObject GameOverPanel;
+	public Text WhoWonText;
 
 	private BoardManager boardManager;
 	private BoardGenerator boardGenerator;
@@ -19,7 +22,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	// Use this for initialization
-	void Start () {
+	public void Start () {
 		boardManager = new BoardManager (BoardView, boardGenerator);
 		from = null;
 		whoGoes = Color.WHITE;
@@ -35,6 +38,7 @@ public class GameManager : MonoBehaviour {
 				} else {
 					from = null;
 					boardManager.WasRemovedPiece = false;
+					checkGameOver ();
 					switchUser ();
 				}
 			}
@@ -59,6 +63,14 @@ public class GameManager : MonoBehaviour {
 			return new Position (x, y);
 		} else {
 			return null;
+		}
+	}
+
+	private void checkGameOver() {
+		Color enemyColor = (whoGoes == Color.WHITE) ? Color.BLACK : Color.WHITE;
+		if (boardManager.AllPiecesAreEaten (enemyColor)) {
+			GameOverPanel.SetActive (true);
+			WhoWonText.text = whoGoes + " PLAYER WON THE GAME";
 		}
 	}
 

@@ -12,9 +12,12 @@ public class BoardView : MonoBehaviour {
 
 	public void InitView(Piece[,] boardModel) {
 		for (int y = 0; y < 8; y++) {
-			for (int x = 0; x < 8; x++) {
+			int start = (y % 2 == 1) ? 1 : 0;
+			for (int x = start; x < 8; x += 2) {
 				if (boardModel [x, y] != null) {
 					UpdateCellView (boardModel [x, y], new Position (x, y));
+				} else {
+					changeColorTransparency (findCellView (x, y).GetComponent<Image> (), 0);
 				}
 			}
 		}

@@ -115,6 +115,10 @@ public class BoardManager {
 		return false;
 	}
 
+	public bool AllPiecesAreEaten(Color color){
+		return piecePositions [color].Count == 0;
+	}
+
 	private List<List<Position>> getPossibleAttackPositions(Position position, Piece piece) {
 		List<List<Position>> possibleAttackPositions = new List<List<Position>> ();
 		Position[] diagonalPositions = new Position[4];
