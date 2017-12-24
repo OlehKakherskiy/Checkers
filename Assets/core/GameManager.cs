@@ -29,7 +29,6 @@ public class GameManager : MonoBehaviour {
 		Debug.Log ("WasCelected cell number "+ clickedCell.name);
 		Position currentPos = convertNameToCellPosition (clickedCell.name);
 		if (secondCellChosen()) {
-			Debug.Log ("Position to move cell is " + currentPos);
 			if (isMovementSuccessful(currentPos)) {
 				if (boardManager.WasRemovedPiece && hasPieceToAttack (currentPos)) {
 					from = currentPos;
@@ -42,14 +41,12 @@ public class GameManager : MonoBehaviour {
 		} else {
 			Piece chosenPiece = boardManager.GetPiece(currentPos);
 			if (emptyCellWasChosen (chosenPiece)) {
-				System.Console.WriteLine("chosen cell is absent");
 				return;
 			}
-			if (isObligedToAttackFromAnotherPosition(currentPos)) {
+			if (chosenPiece.Color != whoGoes || isObligedToAttackFromAnotherPosition(currentPos)) {
 				return;
 			}
-			Debug.Log("Chosen piece has a color of " + chosenPiece.Color);
-			from = (chosenPiece.Color == whoGoes) ? currentPos : null;
+			from = currentPos;
 		}
 	}
 
@@ -59,7 +56,6 @@ public class GameManager : MonoBehaviour {
 			int y = cellNum / PIECES_IN_ROW;
 			int offset = (y % 2 == 1) ? 1 : 0;
 			int x = offset + (cellNum % PIECES_IN_ROW) * 2;
-			Debug.Log ("Converted position of cell "+ cellNum + "is "+new Position(x,y));
 			return new Position (x, y);
 		} else {
 			return null;

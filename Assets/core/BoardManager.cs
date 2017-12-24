@@ -32,7 +32,6 @@ public class BoardManager {
 
 		boardView.InitView (boardModel);
 		extractPieces ();
-		extractPieces ();
 		WasRemovedPiece = false;
 	}
 
@@ -80,8 +79,6 @@ public class BoardManager {
 
 		int dX = From.X + deltaX;
 		for (int dY = From.Y + deltaY; (deltaY > 0 && dY <= To.Y) || (deltaY < 0 && dY >= To.Y); dY += deltaY) { 
-			Debug.Log ("Checking cell number " + new Position(dX, dY));
-			Debug.Log ("WTF ?????????????? " + boardModel [dX, dY]);
 			if (object.ReferenceEquals(null, boardModel [dX, dY])) {
 				positions.Add (null);
 			} else {
@@ -94,7 +91,8 @@ public class BoardManager {
 
 	public bool HasPieceToAttack(Position position) {
 		Piece piece = GetPiece (position);
-		foreach (List<Position> diagonalSlice in getPossibleAttackPositions(position, piece)) {
+		List<List<Position>> possibleAttackVectors = getPossibleAttackPositions (position, piece);
+		foreach (List<Position> diagonalSlice in possibleAttackVectors) {
 			if (diagonalSlice.Count >= 2 
 				&& !object.ReferenceEquals(null, diagonalSlice[0]) 
 				&& object.ReferenceEquals(null, diagonalSlice[1]) 
@@ -109,11 +107,11 @@ public class BoardManager {
 		if (HasPieceToAttack (position)) {
 			return false;
 		}
-		//foreach (Position anotherPosition in piecePositions[GetPiece (position).Color]) {
-		//	if (!anotherPosition.Equals (position) && HasPieceToAttack(anotherPosition)) {
-		//		return true;
-		//	}
-		//}
+		foreach (Position anotherPosition in piecePositions[GetPiece (position).Color]) {
+			if (!position.Equals (anotherPosition) && HasPieceToAttack(anotherPosition)) {
+				return true;
+			}
+		}
 		return false;
 	}
 
@@ -135,8 +133,7 @@ public class BoardManager {
 		Position diagonalPosition = new Position(pos.X, pos.Y);
 		int endX = (deltaX > 0) ? 7 : 0;
 		int endY = (deltaY > 0) ? 7 : 0;
-
-		Debug.Log ("get diagonal positions for pos = " + pos);
+	
 		while(diagonalPosition.X != endX && diagonalPosition.Y != endY) {
 			if (maxIterations == 0) {
 				break;
@@ -144,7 +141,6 @@ public class BoardManager {
 			maxIterations--;
 			diagonalPosition.X += deltaX;
 			diagonalPosition.Y += deltaY;
-			Debug.Log (diagonalPosition);
 		}
 		return diagonalPosition;
 	}

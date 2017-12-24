@@ -11,7 +11,6 @@ public class BoardView : MonoBehaviour {
 	public Sprite BlackKing;
 
 	public void InitView(Piece[,] boardModel) {
-		Debug.Log (boardModel);
 		for (int y = 0; y < 8; y++) {
 			for (int x = 0; x < 8; x++) {
 				if (boardModel [x, y] != null) {
@@ -23,8 +22,6 @@ public class BoardView : MonoBehaviour {
 
 	public void UpdateCellView(Piece piece, Position position) {
 		GameObject panelToUpdateImage = findCellView (position.X, position.Y);
-		Debug.Log (position);
-		Debug.Log (panelToUpdateImage.name);
 		Sprite imgToSet = null;
 		if (piece.Color == Color.WHITE) {
 			imgToSet = (piece.CheckerType == Type.PAWN) ? WhitePawn : WhiteKing;
