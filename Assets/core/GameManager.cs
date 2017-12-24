@@ -28,20 +28,28 @@ public class GameManager : MonoBehaviour {
 	public void HandleCellClick(GameObject clickedCell) {
 		Debug.Log ("WasCelected cell number "+ clickedCell.name);
 		Position currentPos = convertNameToCellPosition (clickedCell.name);
-		if (secondCellChosen()) { //identifying position to move <chosenPiece>
+		if (secondCellChosen()) {
 			Debug.Log ("Position to move cell is " + currentPos);
-			if (boardManager.GetPiece (from).doMovement (from, currentPos) == true) {
-				from = null;
-				switchUser ();
+			if (isMovementSuccessful(currentPos)) {
+				if (boardManager.WasRemovedPiece && hasPieceToAttack (currentPos)) {
+					from = currentPos;
+				} else {
+					from = null;
+					boardManager.WasRemovedPiece = false;
+					switchUser ();
+				}
 			}
-		} else { //identifying whether a cell with appropriate Color
-			Piece pieceToChoose = boardManager.GetPiece(currentPos);
-			if (emptyCellWasChosen (pieceToChoose)) {
+		} else {
+			Piece chosenPiece = boardManager.GetPiece(currentPos);
+			if (emptyCellWasChosen (chosenPiece)) {
 				System.Console.WriteLine("chosen cell is absent");
 				return;
 			}
-			Debug.Log("Chosen piece has a color of " + pieceToChoose.Color);
-			from = (pieceToChoose.Color == whoGoes) ? currentPos : null;
+			if (isObligedToAttackFromAnotherPosition(currentPos)) {
+				return;
+			}
+			Debug.Log("Chosen piece has a color of " + chosenPiece.Color);
+			from = (chosenPiece.Color == whoGoes) ? currentPos : null;
 		}
 	}
 
@@ -64,6 +72,18 @@ public class GameManager : MonoBehaviour {
 
 	private bool emptyCellWasChosen(Piece piece) {
 		return piece == null;
+	}
+
+	private bool isMovementSuccessful(Position to) {
+		return boardManager.GetPiece (from).doMovement (from, to) == true;
+	}
+
+	private bool hasPieceToAttack(Position position) {
+		return boardManager.HasPieceToAttack (position);
+	}
+
+	private bool isObligedToAttackFromAnotherPosition(Position position) {
+		return boardManager.ShouldAttackFromAnotherPosition (position);
 	}
 
 	private void switchUser() {

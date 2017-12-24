@@ -46,8 +46,10 @@ public class Piece {
 		}
 		if (isFightMovement (From, To)) {
 			performFightMovement (From, To);
+			boardManager.WasRemovedPiece = true;
 		} else {
 			performSimpleMovement (From, To);
+			boardManager.WasRemovedPiece = false;
 		}
 		return true;
 	}
@@ -59,8 +61,11 @@ public class Piece {
 	private Boolean basicValidationIsOk(Position From, Position To) {
 		int DeltaX = Math.Abs (From.X - To.X);
 		int DeltaY = Math.Abs (From.Y - To.Y);
+		if(!object.ReferenceEquals(null, boardManager.GetPiece(To))) {
+			return false;
+		}
 		if (this.checkerType == Type.PAWN) {
-			return DeltaX == DeltaY && ((DeltaX == SIMPLE_MOVEMENT && MovementValidationForTypeIsOk(From, To)) || DeltaX == FIGHT_MOVEMENT);
+			return DeltaX == DeltaY && ((DeltaX == SIMPLE_MOVEMENT && boardManager.WasRemovedPiece == false && MovementValidationForTypeIsOk(From, To)) || DeltaX == FIGHT_MOVEMENT);
 		} else {
 			return DeltaX == DeltaY;
 		}
@@ -71,10 +76,13 @@ public class Piece {
 	}
 
 	private Boolean isValidCheckersCountBetween(List<Position> checkersBetween, Position From, Position To) {
+		checkersBetween.RemoveAll (position => object.ReferenceEquals(null, position));
+		checkersBetween.RemoveAll (position => To.Equals (position));
 		if (checkersBetween.Count > MAX_VALID_CHECKERS_COUNT_BETWEEN_POSITIONS) {
 			return false;
 		}
-		if (isFightMovement (From, To) && checkersBetween.Count == 0) {
+		bool fightMovement = isFightMovement (From, To);
+		if (fightMovement && checkersBetween.Count == 0) {
 			return false;
 		}
 		if (checkersBetween.Count == MAX_VALID_CHECKERS_COUNT_BETWEEN_POSITIONS) {
@@ -88,12 +96,17 @@ public class Piece {
 	}
 
 	private Boolean isFightMovement(Position From, Position To) {
-		return Math.Abs(From.X - To.X) == FIGHT_MOVEMENT;
+		return (this.CheckerType == Type.PAWN && Math.Abs(From.X - To.X) == FIGHT_MOVEMENT) || Math.Abs(From.X - To.X) > SIMPLE_MOVEMENT;
 	}
 
 	private void performFightMovement(Position From, Position To) {
-		Position eatenChecker = boardManager.GetCheckersBetween (From, To).ElementAt (0);
+		List<Position> diagonalElements = boardManager.GetCheckersBetween (From, To);
+		diagonalElements.RemoveAll(position => object.ReferenceEquals(null, position));
+		Position eatenChecker = diagonalElements.ElementAt (0);
 		Debug.Log ("Should be eaten checker with pos " + eatenChecker);
+		if (isBecomeAKing(To)) {
+			this.checkerType = Type.KING;
+		}
 		boardManager.MoveChecker (this, From, To);
 		boardManager.RemoveChecker (eatenChecker);
 	}
