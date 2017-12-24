@@ -19,6 +19,18 @@ public class BoardGenerator {
 		return gameBoard;
 	}
 
+	public Piece[,] GenerateStartGameBoard(BoardManager boardManager, Piece[,] preGeneratedBoard) {
+		for (int y = 0; y < 8; y++) {
+			int start = (y % 2 == 1) ? 1 : 0;
+			for (int x = start; x < 8; x += 2) {
+				if (!object.ReferenceEquals (null, preGeneratedBoard [x, y])) {
+					preGeneratedBoard [x, y].BoardManager = boardManager;
+				}
+			}
+		}
+		return preGeneratedBoard;
+	}
+
 	private void generateLine(Piece[,] gameBoard, int lineNumber, Color color, BoardManager boardManager) {
 		int start = (lineNumber % 2 == 1) ? 1 : 0;
 		for (int x = start; x < 8; x += 2) {

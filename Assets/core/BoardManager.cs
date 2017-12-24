@@ -7,8 +7,6 @@ public class BoardManager {
 	private Piece[,] boardModel;
 	private BoardView boardView;
 
-	private List<Position> whitePiecePositions;
-	private List<Position> blackPiecePositions;
 	private Dictionary<Color, List<Position>> piecePositions;
 
 	private bool wasRemovedPiece;
@@ -22,17 +20,27 @@ public class BoardManager {
 		}
 	}
 
-	public BoardManager(BoardView boardView, BoardGenerator boardGenerator) {
+	public BoardManager(BoardView boardView) {
 		this.boardView = boardView;
-		boardModel = boardGenerator.GenerateStartGameBoard (this);
+	}
 
+	public void LoadGame(GameData gameData) {
+		this.boardModel = gameData.GameBoard;
+		this.WasRemovedPiece = gameData.WasEatenEnemyPiece;
+		reformatPiecesStructure ();
+		boardView.InitView (boardModel);
+	}
+
+	public void SaveData(GameData gameData) {
+		gameData.GameBoard = boardModel;
+		gameData.WasEatenEnemyPiece = WasRemovedPiece;
+	}
+
+	private void reformatPiecesStructure() {
 		piecePositions = new Dictionary<Color, List<Position>> ();
 		piecePositions.Add (Color.WHITE, new List<Position> ());
 		piecePositions.Add (Color.BLACK, new List<Position> ());
-
-		boardView.InitView (boardModel);
 		extractPieces ();
-		WasRemovedPiece = false;
 	}
 
 	private void extractPieces() {

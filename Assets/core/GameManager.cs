@@ -17,15 +17,20 @@ public class GameManager : MonoBehaviour {
 	private Position from;
 	private Color whoGoes;
 
+	private GameProceedingStrategy gameProceedingStrategy;
+
 	void Awake() {
 		boardGenerator = new BoardGenerator ();
+		gameProceedingStrategy = new FileGameProceedStrategy (boardGenerator);
 	}
 
 	// Use this for initialization
 	public void Start () {
-		boardManager = new BoardManager (BoardView, boardGenerator);
-		from = null;
-		whoGoes = Color.WHITE;
+		boardManager = new BoardManager (BoardView);
+		GameData gameData = gameProceedingStrategy.Load (boardManager);
+		boardManager.LoadGame (gameData);
+		from = gameData.SelectedPiece;
+		whoGoes = gameData.WhoGoes;
 	}
 
 	public void HandleCellClick(GameObject clickedCell) {
@@ -52,6 +57,20 @@ public class GameManager : MonoBehaviour {
 			}
 			from = currentPos;
 		}
+	}
+
+	public void SaveGame() {
+		GameData gameData = new GameData ();
+		gameData.SelectedPiece = this.from;
+		gameData.WhoGoes = this.whoGoes;
+
+		boardManager.SaveData (gameData);
+
+		gameProceedingStrategy.Save (gameData);
+	}
+
+	public void RemoveSavedGame() {
+		gameProceedingStrategy.RemoveSavedGame ();
 	}
 
 	private Position convertNameToCellPosition(string cellName) {

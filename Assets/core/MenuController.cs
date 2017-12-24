@@ -42,6 +42,7 @@ public class MenuController : MonoBehaviour {
 
 	public void StartNewGame() {
 		Debug.Log ("Start New Game");
+		gameManager.RemoveSavedGame ();
 		GameOverPanel.SetActive (false);
 		MenuPanel.SetActive (false);
 		gameManager.Start ();
@@ -51,10 +52,12 @@ public class MenuController : MonoBehaviour {
 		MenuPanel.SetActive (false);
 		GameOverPanel.SetActive (false);
 		Debug.Log ("Save And Exit");
+		gameManager.SaveGame ();
 		Application.Quit ();
 	}
 
 	public void Exit() {
+		gameManager.RemoveSavedGame ();
 		Application.Quit ();
 	}
 

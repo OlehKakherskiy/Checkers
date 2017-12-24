@@ -12,6 +12,7 @@ public enum Type {
 	PAWN,
 	KING
 }
+[System.Serializable]
 public class Piece {
 
 	private static readonly int SIMPLE_MOVEMENT = 1;
@@ -20,6 +21,8 @@ public class Piece {
 
 	private Color color;
 	private Type checkerType;
+
+	[System.NonSerialized]
 	private BoardManager boardManager;
 
 	public Color Color {
@@ -31,6 +34,15 @@ public class Piece {
 	public Type CheckerType {
 		get {
 			return this.checkerType;
+		}
+	}
+
+	public BoardManager BoardManager {
+		get {
+			return this.boardManager;
+		}
+		set {
+			boardManager = value;
 		}
 	}
 
