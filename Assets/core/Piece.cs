@@ -53,21 +53,26 @@ public class Piece {
 	}
 
 	public bool doMovement(Position From, Position To) {
-		if (!isValidMovement (From, To)) {
+		List<Position> pieceBetweenPositions = boardManager.GetCheckersBetween (From, To);
+		pieceBetweenPositions.RemoveAll (position => object.ReferenceEquals(null, position));
+		pieceBetweenPositions.RemoveAll (position => To.Equals (position));
+
+		if (!basicValidationIsOk(From, To)) {
 			return false;
 		}
-		if (isFightMovement (From, To)) {
-			performFightMovement (From, To);
+		if (isFightMovement (From, To, pieceBetweenPositions)) {
+			if (!isEnemyChecker (pieceBetweenPositions [0]))
+				return false;
+			performFightMovement (From, To, pieceBetweenPositions);
 			boardManager.WasRemovedPiece = true;
 		} else {
+			if (boardManager.HasPieceToAttack (From)) {
+				return false;
+			}
 			performSimpleMovement (From, To);
 			boardManager.WasRemovedPiece = false;
 		}
 		return true;
-	}
-
-	private Boolean isValidMovement(Position From, Position To) {
-		return basicValidationIsOk (From, To) && isValidCheckersCountBetween (boardManager.GetCheckersBetween (From, To), From, To);
 	}
 
 	private Boolean basicValidationIsOk(Position From, Position To) {
@@ -87,34 +92,23 @@ public class Piece {
 		return Math.Sign(To.Y - From.Y) == (int) this.color; //in case of White checker deltaY should be positive (because we're moving from 1 to 8 rows), in case of black - should be negative
 	}
 
-	private Boolean isValidCheckersCountBetween(List<Position> checkersBetween, Position From, Position To) {
-		checkersBetween.RemoveAll (position => object.ReferenceEquals(null, position));
-		checkersBetween.RemoveAll (position => To.Equals (position));
-		if (checkersBetween.Count > MAX_VALID_CHECKERS_COUNT_BETWEEN_POSITIONS) {
-			return false;
-		}
-		bool fightMovement = isFightMovement (From, To);
-		if (fightMovement && checkersBetween.Count == 0) {
-			return false;
-		}
-		if (checkersBetween.Count == MAX_VALID_CHECKERS_COUNT_BETWEEN_POSITIONS) {
-			return isEnemyChecker (checkersBetween.ElementAt (0));
-		}
-		return true;
-	}
-
 	private Boolean isEnemyChecker(Position checkerPosition) {
 		return this.color != boardManager.GetPiece(checkerPosition).Color;
 	}
 
-	private Boolean isFightMovement(Position From, Position To) {
-		return (this.CheckerType == Type.PAWN && Math.Abs(From.X - To.X) == FIGHT_MOVEMENT) || Math.Abs(From.X - To.X) > SIMPLE_MOVEMENT;
+	private Boolean isFightMovement(Position From, Position To, List<Position> pieceBetweenPositions) {
+		if (pieceBetweenPositions.Count != MAX_VALID_CHECKERS_COUNT_BETWEEN_POSITIONS) {
+			return false;
+		}
+		if (this.CheckerType == Type.PAWN) {
+			return Math.Abs (From.X - To.X) == FIGHT_MOVEMENT;
+		} else {
+			return Math.Abs (From.X - To.X) > SIMPLE_MOVEMENT;
+		}
 	}
 
-	private void performFightMovement(Position From, Position To) {
-		List<Position> diagonalElements = boardManager.GetCheckersBetween (From, To);
-		diagonalElements.RemoveAll(position => object.ReferenceEquals(null, position));
-		Position eatenChecker = diagonalElements.ElementAt (0);
+	private void performFightMovement(Position From, Position To, List<Position> diagonalPieces) {
+		Position eatenChecker = diagonalPieces.ElementAt (0);
 		Debug.Log ("Should be eaten checker with pos " + eatenChecker);
 		if (isBecomeAKing(To)) {
 			this.checkerType = Type.KING;
