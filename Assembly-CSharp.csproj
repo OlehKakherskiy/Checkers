@@ -51,10 +51,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\core\achievement\AchievementManager.cs" />
+     <Compile Include="Assets\core\achievement\IAchievement.cs" />
+     <Compile Include="Assets\core\achievement\WinCounter.cs" />
      <Compile Include="Assets\core\BoardGenerator.cs" />
      <Compile Include="Assets\core\BoardManager.cs" />
      <Compile Include="Assets\core\BoardView.cs" />
+     <Compile Include="Assets\core\FileGameProceedStrategy.cs" />
+     <Compile Include="Assets\core\GameData.cs" />
      <Compile Include="Assets\core\GameManager.cs" />
+     <Compile Include="Assets\core\GameProceedingStrategy.cs" />
+     <Compile Include="Assets\core\MenuController.cs" />
      <Compile Include="Assets\core\Piece.cs" />
      <Compile Include="Assets\core\Position.cs" />
  <Reference Include="UnityEngine.UI">

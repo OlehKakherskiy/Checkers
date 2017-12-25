@@ -1,22 +1,26 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/core/GameManager.cs">
     <Files>
-      <File FileName="Assets/core/Piece.cs" Line="44" Column="1" />
-      <File FileName="Assets/core/BoardManager.cs" Line="70" Column="2" />
-      <File FileName="Assets/core/BoardView.cs" Line="1" Column="1" />
-      <File FileName="Assets/core/GameManager.cs" Line="29" Column="1" />
-      <File FileName="Assets/core/BoardGenerator.cs" Line="25" Column="15" />
+      <File FileName="Assets/core/MenuController.cs" Line="1" Column="1" />
+      <File FileName="Assets/core/GameManager.cs" Line="14" Column="2" />
+      <File FileName="Assets/core/BoardManager.cs" Line="24" Column="30" />
+      <File FileName="Assets/core/FileGameProceedStrategy.cs" Line="44" Column="106" />
       <File FileName="Assets/core/Position.cs" Line="1" Column="1" />
+      <File FileName="Assets/core/achievement/IAchievement.cs" Line="6" Column="1" />
+      <File FileName="Assets/core/GameProceedingStrategy.cs" Line="10" Column="40" />
+      <File FileName="Assets/core/achievement/WinCounter.cs" Line="20" Column="12" />
+      <File FileName="Assets/core/GameData.cs" Line="65" Column="3" />
+      <File FileName="Assets/core/achievement/AchievementManager.cs" Line="15" Column="50" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/home/oleg/Checkers/Assets/core/BoardManager.cs" line="12" column="7" />
       <Breakpoint file="/home/oleg/Checkers/Assets/core/BoardGenerator.cs" line="7" column="7" />
-      <Breakpoint file="/home/oleg/Checkers/Assets/core/GameManager.cs" line="29" column="1" />
-      <Breakpoint file="/home/oleg/Checkers/Assets/core/BoardManager.cs" line="53" column="1" />
-      <Breakpoint file="/home/oleg/Checkers/Assets/core/BoardManager.cs" line="62" column="1" />
+      <Breakpoint file="/home/oleg/Checkers/Assets/core/BoardManager.cs" line="60" column="1" />
+      <Breakpoint file="/home/oleg/Checkers/Assets/core/BoardManager.cs" line="69" column="1" />
+      <Breakpoint file="/home/oleg/Checkers/Assets/core/BoardManager.cs" line="115" column="1" />
+      <Breakpoint file="/home/oleg/Checkers/Assets/core/BoardManager.cs" line="28" column="8" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
