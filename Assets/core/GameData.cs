@@ -8,15 +8,17 @@ public class GameData {
 	private Color whoGoes;
 	private Position selectedPiece;
 	private bool wasEatenEnemyPiece;
+	private List<IAchievement> achievements;
 
 	public GameData() {
 		gameBoard = new Piece[0, 0];
 		whoGoes = Color.WHITE;
 		selectedPiece = null;
 		wasEatenEnemyPiece = false;
+		achievements = new List<IAchievement> ();
+		achievements.Add (new WinCounter ());
 	}
-
-
+		
 	public Piece[,] GameBoard {
 		get {
 			return this.gameBoard;
@@ -50,6 +52,15 @@ public class GameData {
 		}
 		set {
 			wasEatenEnemyPiece = value;
+		}
+	}
+
+	public List<IAchievement> Achievements {
+		get {
+			return this.achievements;
+		}
+		set {
+			achievements = value;
 		}
 	}
 }

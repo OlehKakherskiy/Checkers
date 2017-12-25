@@ -7,5 +7,5 @@ public interface GameProceedingStrategy {
 
 	GameData Load(BoardManager boardManager);
 
-	void RemoveSavedGame();
+	void RemoveSavedGame(GameData gameData);
 }

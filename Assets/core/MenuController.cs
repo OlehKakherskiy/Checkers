@@ -8,6 +8,7 @@ public class MenuController : MonoBehaviour {
 	public GameObject MenuPanel;
 	private GameManager gameManager;
 	public GameObject GameOverPanel;
+	public GameObject AchievementsPanel;
 
 	void Start () {
 		gameManager = BoardPanel.GetComponent<GameManager> ();
@@ -17,7 +18,7 @@ public class MenuController : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Escape)) 
 		{
-			if (GameOverPanel.activeInHierarchy) 
+			if (GameOverPanel.activeInHierarchy || AchievementsPanel.activeInHierarchy) 
 			{
 				//ignore escape on game over panel
 				return;
@@ -61,5 +62,13 @@ public class MenuController : MonoBehaviour {
 		Application.Quit ();
 	}
 
+	public void ShowAchievements() {
+		MenuPanel.SetActive (false);
+		AchievementsPanel.SetActive (true);
+	}
 
+	public void ReturnToMenuFromAchievements() {
+		MenuPanel.SetActive (true);
+		AchievementsPanel.SetActive (false);
+	}
 }

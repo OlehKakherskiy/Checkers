@@ -41,19 +41,21 @@ public class FileGameProceedStrategy : GameProceedingStrategy {
 		return gameData;
 	}
 
-	private void completeBoardModelPreparation(BoardManager boardManager, GameData gameData, bool fileLoadFailed) {
-		if (!fileLoadFailed) {
+	private void completeBoardModelPreparation(BoardManager boardManager, GameData gameData, bool fileExists) {
+		if (!fileExists || gameData.GameBoard.Length == 0) {
 			gameData.GameBoard = boardGenerator.GenerateStartGameBoard (boardManager);
 		} else {
 			gameData.GameBoard = boardGenerator.GenerateStartGameBoard (boardManager, gameData.GameBoard);
 		}
 	}
 
-	public void RemoveSavedGame()
+	public void RemoveSavedGame(GameData gameData)
 	{
-		string loadFromFile = Application.persistentDataPath + "/savedGame.gd";
-		if (File.Exists (loadFromFile)) {
-			File.Delete (loadFromFile);
-		}
+		gameData.GameBoard = new Piece[0, 0];
+		gameData.SelectedPiece = null;
+		gameData.WasEatenEnemyPiece = false;
+		gameData.WhoGoes = Color.WHITE;
+
+		Save (gameData);
 	}
 }

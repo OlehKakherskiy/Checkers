@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
 
 	public BoardView BoardView;
 	public GameObject GameOverPanel;
+	public AchievementManager AchievementManager;
 	public Text WhoWonText;
 
 	private BoardManager boardManager;
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour {
 	private Color whoGoes;
 
 	private GameProceedingStrategy gameProceedingStrategy;
+	private GameData gameData;
 
 	void Awake() {
 		boardGenerator = new BoardGenerator ();
@@ -27,8 +29,9 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	public void Start () {
 		boardManager = new BoardManager (BoardView);
-		GameData gameData = gameProceedingStrategy.Load (boardManager);
+		gameData = gameProceedingStrategy.Load (boardManager);
 		boardManager.LoadGame (gameData);
+		AchievementManager.LoadGame (gameData);
 		from = gameData.SelectedPiece;
 		whoGoes = gameData.WhoGoes;
 	}
@@ -41,9 +44,9 @@ public class GameManager : MonoBehaviour {
 				if (boardManager.WasRemovedPiece && hasPieceToAttack (currentPos)) {
 					from = currentPos;
 				} else {
+					checkGameOver ();
 					from = null;
 					boardManager.WasRemovedPiece = false;
-					checkGameOver ();
 					switchUser ();
 				}
 			}
@@ -63,6 +66,7 @@ public class GameManager : MonoBehaviour {
 		GameData gameData = new GameData ();
 		gameData.SelectedPiece = this.from;
 		gameData.WhoGoes = this.whoGoes;
+		gameData.Achievements = this.gameData.Achievements;
 
 		boardManager.SaveData (gameData);
 
@@ -70,7 +74,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 	public void RemoveSavedGame() {
-		gameProceedingStrategy.RemoveSavedGame ();
+		gameProceedingStrategy.RemoveSavedGame (gameData);
 	}
 
 	private Position convertNameToCellPosition(string cellName) {
@@ -90,7 +94,15 @@ public class GameManager : MonoBehaviour {
 		if (boardManager.AllPiecesAreEaten (enemyColor)) {
 			GameOverPanel.SetActive (true);
 			WhoWonText.text = whoGoes + " PLAYER WON THE GAME";
+			updateAchievements ();
 		}
+	}
+
+	private void updateAchievements() {
+		gameData.SelectedPiece = this.from;
+		gameData.WhoGoes = this.whoGoes;
+		boardManager.SaveData (gameData);
+		AchievementManager.UpdateAchievements (gameData);
 	}
 
 	private bool secondCellChosen() {
