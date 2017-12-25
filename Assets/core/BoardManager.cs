@@ -87,6 +87,8 @@ public class BoardManager {
 
 		int dX = From.X + deltaX;
 		for (int dY = From.Y + deltaY; (deltaY > 0 && dY <= To.Y) || (deltaY < 0 && dY >= To.Y); dY += deltaY) { 
+			if (dX < 0 || dX >= 8)
+				break;
 			if (object.ReferenceEquals(null, boardModel [dX, dY])) {
 				positions.Add (null);
 			} else {
@@ -99,16 +101,22 @@ public class BoardManager {
 
 	public bool HasPieceToAttack(Position position) {
 		Piece piece = GetPiece (position);
-		List<List<Position>> possibleAttackVectors = getPossibleAttackPositions (position, piece);
+		List<List<Position>> possibleAttackVectors = getPossibleAttackPositions (position, piece).FindAll (attackVector => attackVector.Count >= 2);
 		foreach (List<Position> diagonalSlice in possibleAttackVectors) {
-			if (diagonalSlice.Count >= 2 
-				&& !object.ReferenceEquals(null, diagonalSlice[0]) 
-				&& object.ReferenceEquals(null, diagonalSlice[1]) 
-				&& GetPiece (diagonalSlice [0]).Color != piece.Color) {
+			int firstPiecePosition = diagonalSlice.FindIndex(pos => !object.ReferenceEquals(null, pos));
+			if (attackIsValid(piece, diagonalSlice, firstPiecePosition)) {
 				return true;
 			}
 		}
 		return false;
+	}
+
+	private bool attackIsValid(Piece piece, List<Position> attackDiagonal, int possibleEnemyPosition) {
+		if (possibleEnemyPosition == -1 || possibleEnemyPosition >= attackDiagonal.Count - 1)
+			return false;
+		return !object.ReferenceEquals (null, attackDiagonal [possibleEnemyPosition])
+			&& object.ReferenceEquals (null, attackDiagonal [possibleEnemyPosition + 1])
+			&& GetPiece (attackDiagonal [possibleEnemyPosition]).Color != piece.Color;
 	}
 
 	public bool ShouldAttackFromAnotherPosition(Position position) {
